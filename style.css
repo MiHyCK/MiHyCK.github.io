@@ -43,7 +43,8 @@ nav {
     box-sizing: border-box;
 }
 
-header, footer {
+header,
+footer {
     background-color: #729bca;
 }
 
@@ -61,6 +62,7 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 100%;
 }
 
 .logo-block {
@@ -113,11 +115,14 @@ table {
     background-color: #fff;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #000;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
     text-align: center;
 }
@@ -139,10 +144,11 @@ tbody tr:nth-child(odd) {
     .topbar-content {
         width: 100%;
         padding: 5px;
-        margin: 0;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 20px;
         box-sizing: border-box;
     }
 
@@ -165,9 +171,11 @@ tbody tr:nth-child(odd) {
     .header-content {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
-        width: 100%;
+        gap: 40px;
+        width: auto;
+        flex: 1 1 auto;
     }
 
     nav ul {
