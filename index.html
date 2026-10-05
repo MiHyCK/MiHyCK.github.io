@@ -8,21 +8,21 @@
 </head>
 <body>
 
+<div class="topbar">
+    <header>
+        <div class="topbar-content container">
 
-    <header id="page-header">
-        <div class="header-inner">
-
-
-            <a class="logo" href="index.html" title="На главную страницу">
-                <img src="image.png" alt="Логотип сайта">
+            <a class="logo-block" href="index.html" title="На главную страницу">
+                <img class="logo-img" src="image.png" alt="Логотип сайта">
             </a>
 
-
-            <div class="header-text">
+            <div class="header-content">
                 <nav id="main-nav" aria-label="Основное меню">
-                    <a class="menu-link" href="#hyperlinks">Список гиперссылок</a>
-                    <a class="menu-link" href="#table-block">Таблица</a>
-                    <a class="menu-link" href="#form-block">Форма</a>
+                    <ul>
+                        <li><a class="menu-link" href="#links">Список гиперссылок</a></li>
+                        <li><a class="menu-link" href="#table">Таблица</a></li>
+                        <li><a class="menu-link" href="#form">Форма</a></li>
+                    </ul>
                 </nav>
 
                 <h1 class="site-title">Название сайта</h1>
@@ -30,207 +30,194 @@
 
         </div>
     </header>
+</div>
 
+<main id="content" class="main-content container">
 
-    <main id="content">
+    <section class="block" id="links">
+        <h2 class="block-title">Список гиперссылок</h2>
 
+        <ul class="link-list">
+            <li><a href="http://kubsu.ru/">1. Гиперссылка на сайт kubsu.ru</a></li>
+            <li><a href="https://www.kubsu.ru/">2. Гиперссылка на сайт kubsu.ru в протоколе https</a></li>
+            <li id="whw">
+                <a href="http://kubsu.ru">
+                    3. <img src="image.jpg" alt="Цветок" width="400" height="400">
+                </a>
+            </li>
+            <li><a href="second.html">4. Сокращённая ссылка на внутреннюю страницу</a></li>
+            <li><a href="index.html">5. Сокращённая ссылка на главную страницу</a></li>
+            <li><a href="#whw">6. Ссылка на картинку на текущей странице</a></li>
+            <li><a href="https://www.dns-shop.ru/catalog/personal/?category=17a8a01d16404e77&amp;stock=now-today-tomorrow-later&amp;price=15001-30000">7. Ссылка с тремя параметрами</a></li>
+            <li><a href="https://vtour.kubsu.ru/map/map.html?area=00&amp;id=modelMark">8. Ссылка с параметром id</a></li>
+            <li><a href="./second.html">9. Относительная ссылка на страницу в текущем каталоге</a></li>
+            <li><a href="about.html">10. Относительная ссылка на страницу в каталоге about</a></li>
+            <li><a href="../index.html">11. Относительная ссылка на страницу уровнем выше</a></li>
+            <li><a href="../../index.html">12. Относительная ссылка на страницу двумя уровнями выше</a></li>
+            <li>13. Доступен <a href="https://kubsu.ru">сайт КубГУ</a></li>
+            <li><a href="https://vtour.kubsu.ru/map/map.html?area=00#modelMark">14. Ссылка на фрагмент другого сайта</a></li>
+            <li><a href="">15. Ссылка с пустым href</a></li>
+            <li><a>16. Ссылка без href</a></li>
+            <li><a href="https://kubsu.ru" rel="nofollow">17. Ссылка, по которой запрещён переход поисковикам</a></li>
+            <li><a href="https://kubsu.ru" rel="noindex nofollow">18. Ссылка, запрещённая для индексации</a></li>
+            <li>19. Нумерованный список ссылок:
+                <ol class="link-sublist">
+                    <li><a href="https://www.kubsu.ru">Сайт КубГУ</a></li>
+                    <li><a href="https://dns-shop.ru">Сайт электротоваров</a></li>
+                </ol>
+            </li>
+            <li><a href="ftp://login:password@server/file.pdf">20. Ссылка на FTP с авторизацией</a></li>
+        </ul>
+    </section>
 
-        <section class="block" id="hyperlinks">
-            <h2 class="block-title">Список гиперссылок</h2>
+    <section class="block" id="table">
+        <h2 class="block-title">Таблица</h2>
 
-            <ul class="link-list">
-                <li><a href="http://kubsu.ru/">1. Гиперссылка на сайт kubsu.ru</a></li>
-                <li><a href="https://www.kubsu.ru/">2. Гиперссылка на сайт kubsu.ru в протоколе https</a></li>
-                <li id="whw">
-                    <a href="http://kubsu.ru">
-                        3. <img src="image.jpg" alt="Цветок" width="400" height="400">
-                    </a>
-                </li>
-                <li><a href="second.html">4. Сокращённая ссылка на внутреннюю страницу</a></li>
-                <li><a href="index.html">5. Сокращённая ссылка на главную страницу</a></li>
-                <li><a href="#whw">6. Ссылка на картинку на текущей странице</a></li>
-                <li><a href="https://www.dns-shop.ru/catalog/personal/?category=17a8a01d16404e77&amp;stock=now-today-tomorrow-later&amp;price=15001-30000">7. Ссылка с тремя параметрами</a></li>
-                <li><a href="https://vtour.kubsu.ru/map/map.html?area=00&amp;id=modelMark">8. Ссылка с параметром id</a></li>
-                <li><a href="./second.html">9. Относительная ссылка на страницу в текущем каталоге</a></li>
-                <li><a href="about.html">10. Относительная ссылка на страницу в каталоге about</a></li>
-                <li><a href="../index.html">11. Относительная ссылка на страницу уровнем выше</a></li>
-                <li><a href="../../index.html">12. Относительная ссылка на страницу двумя уровнями выше</a></li>
-                <li>13. Доступен <a href="https://kubsu.ru">сайт КубГУ</a></li>
-                <li><a href="https://vtour.kubsu.ru/map/map.html?area=00#id=modelMark">14. Ссылка на фрагмент другого сайта</a></li>
-                <li><a href="">15. Ссылка с пустым href</a></li>
-                <li><a>16. Ссылка без href</a></li>
-                <li><a href="https://kubsu.ru" rel="nofollow">17. Ссылка, по которой запрещён переход поисковикам</a></li>
-                <li><a href="https://kubsu.ru" rel="noindex nofollow">18. Ссылка, запрещённая для индексации</a></li>
-                <li>19. Нумерованный список ссылок:
-                    <ol class="link-sublist">
-                        <li><a href="https://www.kubsu.ru">Сайт КубГУ</a></li>
-                        <li><a href="https://dns-shop.ru">Сайт электротоваров</a></li>
-                    </ol>
-                </li>
-                <li><a href="ftp://login:password@server/file.pdf">20. Ссылка на FTP с авторизацией</a></li>
-            </ul>
-        </section>
+        <table id="data-table">
+            <caption>Результаты сдачи лабораторных работ (группа 3-ИВТ)</caption>
 
+            <thead>
+                <tr>
+                    <th rowspan="2" scope="col">№</th>
+                    <th rowspan="2" scope="col">ФИО студента</th>
+                    <th colspan="2" scope="colgroup">Контактные данные</th>
+                    <th rowspan="2" scope="col">Средний балл</th>
+                </tr>
+                <tr>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Телефон</th>
+                </tr>
+            </thead>
 
-        <section class="block" id="table-block">
-            <h2 class="block-title">Таблица</h2>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Имя</td>
+                    <td>pochta@example.com</td>
+                    <td>+7 988 111-11-11</td>
+                    <td>4,7</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Имя</td>
+                    <td>pochta@example.com</td>
+                    <td>+7 988 111-11-11</td>
+                    <td>4,2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Имя</td>
+                    <td>pochta@example.com</td>
+                    <td>+7 988 111-11-11</td>
+                    <td>3,9</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Имя</td>
+                    <td>pochta@example.com</td>
+                    <td>+7 988 111-11-11</td>
+                    <td>5,0</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Имя</td>
+                    <td>pochta@example.com</td>
+                    <td>+7 988 111-11-11</td>
+                    <td>4,5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Имя</td>
+                    <td>pochta@example.com</td>
+                    <td>+7 988 111-11-11</td>
+                    <td>4,8</td>
+                </tr>
+            </tbody>
 
-            <div class="table-wrap">
-                <table id="data-table">
-                    <caption>Результаты сдачи лабораторных работ (группа 3-ИВТ)</caption>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Итого по группе</td>
+                    <td>4,52</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
 
-                    <thead>
-                        <tr>
-                            <th rowspan="2" scope="col">№</th>
-                            <th rowspan="2" scope="col">ФИО студента</th>
-                            <th colspan="2" scope="colgroup">Контактные данные</th>
-                            <th rowspan="2" scope="col">Средний балл</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">E-mail</th>
-                            <th scope="col">Телефон</th>
-                        </tr>
-                    </thead>
+    <section class="block" id="form">
+        <h2 class="block-title">Форма</h2>
 
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Имя</td>
-                            <td>pochta@example.com</td>
-                            <td>+7 988 111-11-11</td>
-                            <td>4,7</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Имя</td>
-                            <td>pochta@example.com</td>
-                            <td>+7 988 111-11-11</td>
-                            <td>4,2</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Имя</td>
-                            <td>pochta@example.com</td>
-                            <td>+7 988 111-11-11</td>
-                            <td>3,9</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Имя</td>
-                            <td>pochta@example.com</td>
-                            <td>+7 988 111-11-11</td>
-                            <td>5,0</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Имя</td>
-                            <td>pochta@example.com</td>
-                            <td>+7 988 111-11-11</td>
-                            <td>4,5</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Имя</td>
-                            <td>pochta@example.com</td>
-                            <td>+7 988 111-11-11</td>
-                            <td>4,8</td>
-                        </tr>
-                    </tbody>
+        <form id="feedback-form" action="/" method="post">
 
-                    <tfoot>
-                        <tr>
-                            <td colspan="4">Итого по группе</td>
-                            <td>4,52</td>
-                        </tr>
-                    </tfoot>
-                </table>
+            <div class="form-field">
+                <label class="form-label" for="field-name">ФИО</label>
+                <input class="form-control" type="text" id="field-name" name="field-name" placeholder="Введите ФИО">
             </div>
-        </section>
 
+            <div class="form-field">
+                <label class="form-label" for="field-tel">Телефон</label>
+                <input class="form-control" type="tel" id="field-tel" name="field-tel" placeholder="Введите номер телефона">
+            </div>
 
-        <section class="block" id="form-block">
-            <h2 class="block-title">Форма</h2>
+            <div class="form-field">
+                <label class="form-label" for="field-email">E-mail</label>
+                <input class="form-control" type="email" id="field-email" name="field-email" placeholder="Введите почту">
+            </div>
 
-            <form id="feedback-form" action="/" method="post">
+            <div class="form-field">
+                <label class="form-label" for="field-date">Дата рождения</label>
+                <input class="form-control" type="date" id="field-date" name="field-date">
+            </div>
 
-                <div class="form-field">
-                    <label class="form-label" for="field-name">ФИО</label>
-                    <input class="form-control" type="text" id="field-name" name="field-name"
-                           placeholder="Введите ФИО">
-                </div>
-
-                <div class="form-field">
-                    <label class="form-label" for="field-tel">Телефон</label>
-                    <input class="form-control" type="tel" id="field-tel" name="field-tel"
-                           placeholder="Введите номер телефона">
-                </div>
-
-                <div class="form-field">
-                    <label class="form-label" for="field-email">E-mail</label>
-                    <input class="form-control" type="email" id="field-email" name="field-email"
-                           placeholder="Введите почту">
-                </div>
-
-                <div class="form-field">
-                    <label class="form-label" for="field-date">Дата рождения</label>
-                    <input class="form-control" type="date" id="field-date" name="field-date">
-                </div>
-
-                <div class="form-field">
-                    <span class="form-label">Пол</span>
-                    <div class="radio-group">
-                        <label class="radio-item">
-                            <input type="radio" name="field-gender" value="male"> Мужской
-                        </label>
-                        <label class="radio-item">
-                            <input type="radio" name="field-gender" value="female"> Женский
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-field">
-                    <label class="form-label" for="field-proglang">Любимый язык программирования</label>
-                    <select class="form-control" id="field-proglang" name="field-proglang[]" multiple
-                            size="6">
-                        <option value="pascal">Pascal</option>
-                        <option value="c">C</option>
-                        <option value="cpp">C++</option>
-                        <option value="javascript">JavaScript</option>
-                        <option value="php">PHP</option>
-                        <option value="python">Python</option>
-                        <option value="java">Java</option>
-                        <option value="haskel">Haskel</option>
-                        <option value="clojure">Clojure</option>
-                        <option value="prolog">Prolog</option>
-                        <option value="scala">Scala</option>
-                    </select>
-                </div>
-
-                <div class="form-field">
-                    <label class="form-label" for="field-bio">Биография</label>
-                    <textarea class="form-control" id="field-bio" name="field-bio"
-                              placeholder="Расскажите о себе"></textarea>
-                </div>
-
-                <div class="form-field checkbox-row">
-                    <input type="checkbox" id="field-contract" name="field-contract" value="yes">
-                    <label class="form-label form-label--inline" for="field-contract">
-                        С контрактом ознакомлен(а)
+            <div class="form-field">
+                <span class="form-label">Пол</span>
+                <div class="radio-group">
+                    <label class="radio-item">
+                        <input type="radio" name="field-gender" value="male"> Мужской
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="field-gender" value="female"> Женский
                     </label>
                 </div>
+            </div>
 
-                <button class="btn-submit" type="submit" id="form-submit">Сохранить</button>
-            </form>
-        </section>
+            <div class="form-field">
+                <label class="form-label" for="field-proglang">Любимый язык программирования</label>
+                <select class="form-control" id="field-proglang" name="field-proglang[]" multiple size="6">
+                    <option value="pascal">Pascal</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="haskel">Haskel</option>
+                    <option value="clojure">Clojure</option>
+                    <option value="prolog">Prolog</option>
+                    <option value="scala">Scala</option>
+                </select>
+            </div>
 
-    </main>
+            <div class="form-field">
+                <label class="form-label" for="field-bio">Биография</label>
+                <textarea class="form-control" id="field-bio" name="field-bio" placeholder="Расскажите о себе"></textarea>
+            </div>
 
+            <div class="form-field checkbox-row">
+                <input type="checkbox" id="field-contract" name="field-contract" value="yes">
+                <label class="form-label form-label--inline" for="field-contract">С контрактом ознакомлен(а)</label>
+            </div>
 
-    <footer id="page-footer">
-        <div class="footer-inner">
-            <p class="copyright">&copy; Захар Латышов</p>
-        </div>
-    </footer>
+            <button class="btn-submit" type="submit" id="form-submit">Сохранить</button>
+        </form>
+    </section>
+
+</main>
+
+<footer id="page-footer">
+    <div class="footer-inner">
+        <p class="copyright">&copy; Захар Латышов</p>
+    </div>
+</footer>
 
 </body>
 </html>
