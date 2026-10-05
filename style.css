@@ -1,0 +1,361 @@
+/* ==========================================================================
+   style.css — оформление страницы (задание 2)
+   (c) Сергей Синица 2023
+   Содержимое отделено от представления: разметка в index.html,
+   все стили — здесь, подключаются через id и классы.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Переменные и базовые правила
+   -------------------------------------------------------------------------- */
+:root {
+    --accent:        #3d6fae;
+    --accent-dark:   #2c5288;
+    --accent-light:  #e3ecf7;
+    --surface:       #ffffff;
+    --border:        #d3dde9;
+    --text:          #1f2933;
+    --text-muted:    #5c6b7a;
+    --page-bg:       #eef2f7;
+    --content-width: 960px;
+    --radius:        10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--page-bg);
+}
+
+a {
+    color: var(--accent-dark);
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   2. Шапка: тянется на всю ширину окна, содержимое — по центру (960px)
+   -------------------------------------------------------------------------- */
+#page-header {
+    width: 100%;
+    background-color: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(31, 41, 51, 0.18);
+}
+
+.header-inner {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 14px 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+/* Логотип */
+#page-header .logo {
+    flex: 0 0 auto;
+    line-height: 0;
+}
+
+#page-header .logo img {
+    display: block;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+}
+
+/* Меню + название сайта */
+.header-text {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#main-nav .menu-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.15s ease;
+}
+
+#main-nav .menu-link:hover,
+#main-nav .menu-link:focus {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------------------------------
+   3. Контент: максимальная ширина 960px, выравнивание по центру
+   -------------------------------------------------------------------------- */
+#content {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 26px 20px 40px;
+}
+
+.block {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin-bottom: 26px;
+    box-shadow: 0 1px 3px rgba(31, 41, 51, 0.06);
+}
+
+.block-title {
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent-dark);
+    border-bottom: 2px solid var(--accent-light);
+}
+
+/* --------------------------------------------------------------------------
+   4. Список гиперссылок
+   -------------------------------------------------------------------------- */
+.link-list {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.link-list > li {
+    margin-bottom: 8px;
+}
+
+.link-list img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 8px 0;
+    border-radius: 6px;
+}
+
+.link-sublist {
+    margin: 8px 0 0;
+    padding-left: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Таблица: объединённые ячейки, чередование фона строк
+   -------------------------------------------------------------------------- */
+.table-wrap {
+    overflow-x: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+#data-table caption {
+    caption-side: top;
+    text-align: left;
+    padding-bottom: 12px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+#data-table th,
+#data-table td {
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Шапка таблицы */
+#data-table thead th {
+    background-color: var(--accent);
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Чередование фона строк: нечётные — светло-голубые, чётные — белые */
+#data-table tbody tr:nth-child(odd) {
+    background-color: #f2f6fb;
+}
+
+#data-table tbody tr:nth-child(even) {
+    background-color: var(--surface);
+}
+
+#data-table tbody tr:hover {
+    background-color: var(--accent-light);
+}
+
+/* Итоговая строка */
+#data-table tfoot td {
+    background-color: var(--accent-light);
+    font-weight: 700;
+    color: var(--accent-dark);
+}
+
+/* --------------------------------------------------------------------------
+   6. Форма
+   -------------------------------------------------------------------------- */
+.form-field {
+    margin-bottom: 18px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.form-label--inline {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.form-control {
+    width: 100%;
+    max-width: 420px;
+    padding: 9px 12px;
+
+    font: inherit;
+    color: inherit;
+    background-color: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.radio-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-submit {
+    display: inline-block;
+    padding: 11px 30px;
+
+    font: inherit;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--accent);
+
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    background-color: var(--accent-dark);
+}
+
+/* --------------------------------------------------------------------------
+   7. Подвал: тянется на всю ширину окна, содержимое — по центру
+   -------------------------------------------------------------------------- */
+#page-footer {
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: var(--accent-dark);
+    color: #ffffff;
+}
+
+.footer-inner {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 18px 20px;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. Адаптивность для узких экранов
+   -------------------------------------------------------------------------- */
+@media (max-width: 620px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .site-title {
+        font-size: 1.25rem;
+    }
+
+    .block {
+        padding: 18px 16px;
+    }
+
+    #data-table {
+        font-size: 0.85rem;
+    }
+
+    #data-table th,
+    #data-table td {
+        padding: 8px 9px;
+    }
+}
